@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col min-h-screen">
-<header class="w-full bg-gray-100 mb-16 p-8">
+<header class="w-full bg-gray-100 mb-16 p-8 sticky top-0">
       <div class="container mx-auto max-w-3xl flex justify-between items-center ">
       <g-link class="font-bold" to="/">{{ $static.metaData.siteName }}</g-link>
       <nav>
@@ -9,7 +9,7 @@
       </nav>
       </div>
     </header>    
-    <section class="container mx-auto max-w-3xl leading-normal px-8 flex-grow">
+    <section class="container mx-auto max-w-3xl leading-relaxed px-8 flex-grow">
     <slot/>
     </section>
     <footer class="w-full bg-gray-100 mt-16 p-8">
