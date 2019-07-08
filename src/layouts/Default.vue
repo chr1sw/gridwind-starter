@@ -4,8 +4,8 @@
       <div class="container mx-auto max-w-3xl flex justify-between items-center ">
       <g-link class="font-bold" to="/">{{ $static.metaData.siteName }}</g-link>
       <nav>
-        <g-link class="hover:underline" to="/">Home</g-link>
-        <g-link class="ml-8 hover:underline" to="/about">About</g-link>
+        <g-link class="hover:underline" to="/about">About</g-link>
+                <g-link class="ml-8 hover:underline" to="/contact">Contact</g-link>
       </nav>
       </div>
     </header>    
