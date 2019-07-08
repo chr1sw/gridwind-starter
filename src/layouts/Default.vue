@@ -1,16 +1,27 @@
 <template>
-  <div class="layout">
-    <header class="header">
-      <strong>
-        <g-link to="/">{{ $static.metaData.siteName }}</g-link>
-      </strong>
-      <nav class="nav">
-        <g-link class="nav__link" to="/">Home</g-link>
-        <g-link class="nav__link" to="/about">About</g-link>
+  <div class="flex flex-col min-h-screen">
+<header class="w-full bg-gray-100 mb-16 p-8">
+      <div class="container mx-auto max-w-3xl flex justify-between items-center ">
+      <g-link class="font-bold" to="/">{{ $static.metaData.siteName }}</g-link>
+      <nav>
+        <g-link class="hover:underline" to="/">Home</g-link>
+        <g-link class="ml-8 hover:underline" to="/about">About</g-link>
       </nav>
-    </header>
+      </div>
+    </header>    
+    <section class="container mx-auto max-w-3xl leading-normal px-8 flex-grow">
     <slot/>
-  </div>
+    </section>
+    <footer class="w-full bg-gray-100 mt-16 p-8">
+      <div class="container mx-auto max-w-3xl flex justify-between items-center ">
+      <g-link class="font-bold" to="/">{{ $static.metaData.siteName }}</g-link>
+      <div>
+        <g-link class="hover:underline" to="/">Home</g-link>
+        <g-link class="ml-8 hover:underline" to="/about">About</g-link>
+      </div>
+      </div>
+    </footer>
+</div>
 </template>
 
 <static-query>
@@ -21,30 +32,3 @@ query {
 }
 </static-query>
 
-<style>
-body {
-  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-  margin:0;
-  padding:0;
-  line-height: 1.5;
-}
-
-.layout {
-  max-width: 760px;
-  margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-  height: 80px;
-}
-
-.nav__link {
-  margin-left: 20px;
-}
-</style>
