@@ -1,26 +1,28 @@
 <template>
   <div class="flex flex-col min-h-screen">
-<header class="w-full bg-gray-100 mb-16 p-8 sticky top-0">
-      <div class="container mx-auto max-w-3xl flex justify-between items-center ">
+
+<header class="w-full bg-white border-b border-gray-500 px-8 py-4 sticky top-0">
+      <div class="container mx-auto max-w-5xl flex justify-between items-center ">
       <g-link class="font-bold" to="/">{{ $static.metaData.siteName }}</g-link>
       <nav>
         <g-link class="hover:underline" to="/about">About</g-link>
-                <g-link class="ml-8 hover:underline" to="/contact">Contact</g-link>
+        <g-link class="ml-8 hover:underline" to="/contact">Contact</g-link>
       </nav>
       </div>
-    </header>    
-    <section class="container mx-auto max-w-3xl leading-relaxed px-8 flex-grow">
+    </header>   
+ 
     <slot/>
-    </section>
-    <footer class="w-full bg-gray-100 mt-16 p-8">
-      <div class="container mx-auto max-w-3xl flex justify-between items-center ">
+
+    <footer class="w-full bg-white border-t border-gray-500 mt-16 px-8 py-4">
+      <div class="container mx-auto max-w-5xl flex justify-between items-center ">
       <g-link class="font-bold" to="/">{{ $static.metaData.siteName }}</g-link>
       <div>
-        <g-link class="hover:underline" to="/">Home</g-link>
-        <g-link class="ml-8 hover:underline" to="/about">About</g-link>
+        <g-link class="hover:underline" to="/about">About</g-link>
+        <g-link class="ml-8 hover:underline" to="/contact">Contact</g-link>
       </div>
       </div>
     </footer>
+
 </div>
 </template>
 
